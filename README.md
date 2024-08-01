@@ -40,6 +40,7 @@ Third, Create and Modify Configuration files (NDB Cluster - Config.ini / MySQL -
 
 -  Example (Config.ini)
      * DataMemory / IndexMemory: Set uniformly based on the available memory size and the number of instances. (DataMemory / IndexMemory)
+     * DiskPageBufferMemory: Setting the DiskPageBufferMemory value for disk page buffering
      * [NDBD] List
      The following list of NDBD items manages the ID information for master-slave instances:
      The first NDBD entry is designated as the Master Instance.
@@ -54,6 +55,9 @@ NoOfReplicas=1
 # Set uniformly based on the available memory size and the number of instances. (DataMemory / IndexMemory)
 DataMemory=2000M 
 IndexMemory=500M
+
+# Setting the DiskPageBufferMemory value for disk page buffering
+DiskPageBufferMemory=2000M
 
 DataDir=/mnt_ssd/jsm1/var/mysql-cluster/mysql-cluster
 MaxNoOfConcurrentOperations=100000
